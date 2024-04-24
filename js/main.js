@@ -27,9 +27,9 @@ class Circle{
     context.strokeStyle = this.color;
     context.textAlign="center";
     context.textBaseline="middle";
-    context.font= "20px Arial";
+    context.font= "35px Arial";
     context.fillText(this.text,this.posX, this.posY);
-    context.lineWidth=2;
+    context.lineWidth=3;
     context.arc(this.posX,this.posY,this.radius,0,Math.PI*2,false);
     context.stroke();
     context.closePath();
@@ -71,7 +71,7 @@ for(let i=0; i<10; i++){
     let randomY= Math.random()*window_height;
     let randomRadius = Math.floor(Math.random()*100+20);
 
-   let miCirculo = new Circle (randomX,randomY,randomRadius,'blue',i+1,5);
+   let miCirculo = new Circle (randomX,randomY,randomRadius,'blue',i+1,3);
 arrayCircle.push(miCirculo);
 }
 
