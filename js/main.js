@@ -42,21 +42,21 @@ class Circle{
         
         //si el circulo supera el margen derecho entonces se mueve a la izquierda
         if (this.posX + this.radius > window_width) {
-        this.dx = -this.dx;
+        this.dx = -this.dx-5;
         }
         
         //si el circulo supera el margen ixquierdo entonces se mueve a la derecha
         if (this.posX - this.radius < 0){
-        this.dx = -this.dx;
+        this.dx = -this.dx-5;
         }
 
         //si el circulo supera el margen inferior entonces se mueve a la izquierda
         if(this.posY+this.radius > window_height){
-            this.dy = -this.dy;}
+            this.dy = -this.dy+5;}
         
             //si el circulo supera el margen superior entonces se mueve a la derecha
         if(this.posY-this.radius < 0){
-            this.dy = -this.dy;}
+            this.dy = -this.dy+5;}
         
         this.posX += this.dx;
         this.posY += this.dy;
@@ -67,8 +67,8 @@ class Circle{
 
 let arrayCircle=[];
 for(let i=0; i<10; i++){
-    let randomX= Math.random()*window_width;
-    let randomY= Math.random()*window_height;
+    let randomX= (Math.random()*window_width);
+    let randomY= (Math.random()*window_height);
     let randomRadius = Math.floor(Math.random()*100+20);
 
    let miCirculo = new Circle (randomX,randomY,randomRadius,'blue',i+1,3);
